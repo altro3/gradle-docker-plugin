@@ -26,7 +26,7 @@ class UserGuidePlugin : Plugin<Project> {
 
     private
     fun Project.disableAsciidoctorTask() {
-        tasks.named<AsciidoctorTask>("asciidoctor").configure(Action { enabled = false })
+        tasks.named<AsciidoctorTask>("asciidoctor").configure { enabled = false }
     }
 
     private
@@ -62,9 +62,9 @@ class UserGuidePlugin : Plugin<Project> {
 
     private
     fun Project.createAllAsciidoctorUserGuideTask(userGuideTask: TaskProvider<AsciidoctorTask>, devGuideTask: TaskProvider<AsciidoctorTask>) {
-        tasks.register("asciidoctorAllGuides").configure(Action {
+        tasks.register("asciidoctorAllGuides").configure {
             dependsOn(userGuideTask)
             dependsOn(devGuideTask)
-        })
+        }
     }
 }

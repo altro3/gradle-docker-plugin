@@ -22,11 +22,11 @@ public class DockerVersion extends AbstractDockerRemoteApiTask {
     public void runRemoteCommand() {
         getLogger().quiet("Retrieving Docker version.");
         Version version = getDockerClient().versionCmd().exec();
-        getLogger().quiet("Version          : " + version.getVersion());
-        getLogger().quiet("Git Commit       : " + version.getGitCommit());
-        getLogger().quiet("Go Version       : " + version.getGoVersion());
-        getLogger().quiet("Kernel Version   : " + version.getKernelVersion());
-        getLogger().quiet("Architecture     : " + version.getArch());
-        getLogger().quiet("Operating System : " + version.getOperatingSystem());
+        getLogger().quiet("Version          : {}", version.getVersion());
+        getLogger().quiet("Git Commit       : {}", version.getGitCommit());
+        getLogger().quiet("Go Version       : {}", version.getGoVersion());
+        getLogger().quiet("Kernel Version   : {}", version.getKernelVersion());
+        getLogger().quiet("Architecture     : {}", version.getArch());
+        getLogger().quiet("Operating System : {}", version.getOperatingSystem());
     }
 }

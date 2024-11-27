@@ -29,23 +29,23 @@ public class DockerInfo extends AbstractDockerRemoteApiTask {
         if (getNextHandler() != null) {
             getNextHandler().execute(info);
         } else {
-            getLogger().quiet("Debug                : " + info.getDebug());
-            getLogger().quiet("Containers           : " + info.getContainers());
-            getLogger().quiet("Driver               : " + info.getDriver());
-            getLogger().quiet("Driver Statuses      : " + info.getDriverStatuses());
-            getLogger().quiet("Images               : " + info.getImages());
-            getLogger().quiet("IPv4 Forwarding      : " + info.getIPv4Forwarding());
-            getLogger().quiet("Index Server Address : " + info.getIndexServerAddress());
-            getLogger().quiet("Init Path            : " + info.getInitPath());
-            getLogger().quiet("Init SHA1            : " + info.getInitSha1());
-            getLogger().quiet("Kernel Version       : " + info.getKernelVersion());
-            getLogger().quiet("Sockets              : " + Arrays.toString(info.getSockets()));
-            getLogger().quiet("Memory Limit         : " + info.getMemoryLimit());
-            getLogger().quiet("nEvent Listener      : " + info.getNEventsListener());
-            getLogger().quiet("NFd                  : " + info.getNFd());
-            getLogger().quiet("NGoroutines          : " + info.getNGoroutines());
-            getLogger().quiet("Swap Limit           : " + info.getSwapLimit());
-            getLogger().quiet("Execution Driver     : " + info.getExecutionDriver());
+            getLogger().quiet("Debug                : {}", info.getDebug());
+            getLogger().quiet("Containers           : {}", info.getContainers());
+            getLogger().quiet("Driver               : {}", info.getDriver());
+            getLogger().quiet("Driver Statuses      : {}", info.getDriverStatuses());
+            getLogger().quiet("Images               : {}", info.getImages());
+            getLogger().quiet("IPv4 Forwarding      : {}", info.getIPv4Forwarding());
+            getLogger().quiet("Index Server Address : {}", info.getIndexServerAddress());
+            getLogger().quiet("Init Path            : {}", info.getInitPath());
+            getLogger().quiet("Init SHA1            : {}", info.getInitSha1());
+            getLogger().quiet("Kernel Version       : {}", info.getKernelVersion());
+            getLogger().quiet("Sockets              : {}", Arrays.toString(info.getSockets()));
+            getLogger().quiet("Memory Limit         : {}", info.getMemoryLimit());
+            getLogger().quiet("nEvent Listener      : {}", info.getNEventsListener());
+            getLogger().quiet("NFd                  : {}", info.getNFd());
+            getLogger().quiet("NGoroutines          : {}", info.getNGoroutines());
+            getLogger().quiet("Swap Limit           : {}", info.getSwapLimit());
+            getLogger().quiet("Execution Driver     : {}", info.getExecutionDriver());
         }
     }
 }

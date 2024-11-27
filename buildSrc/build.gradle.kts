@@ -22,10 +22,11 @@ configurations.all {
 dependencies {
     implementation(kotlin("gradle-plugin"))
     implementation(buildsrcLibs.asciidoctor.jvm.plugin)
-    runtimeOnly(buildsrcLibs.asciidoctorj.tabbed.code.extension)
-    implementation(buildsrcLibs.gradle.git)
+    implementation(buildsrcLibs.reckon)
     implementation(buildsrcLibs.gradle.git.publish)
     implementation(buildsrcLibs.shadow)
+
+    runtimeOnly(buildsrcLibs.asciidoctorj.tabbed.code.extension)
 }
 
 gradlePlugin {

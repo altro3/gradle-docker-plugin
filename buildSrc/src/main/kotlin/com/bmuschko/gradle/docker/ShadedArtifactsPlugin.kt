@@ -9,7 +9,7 @@ import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.kotlin.dsl.*
 
-class ShadedArtifactsPlugin: Plugin<Project> {
+class ShadedArtifactsPlugin : Plugin<Project> {
     override fun apply(project: Project): Unit = project.run {
         applyShadowPlugin()
         val shaded = createShadedConfiguration()
@@ -33,21 +33,22 @@ class ShadedArtifactsPlugin: Plugin<Project> {
     private
     fun Project.configureShadowJarTask(shaded: Configuration): TaskProvider<ShadowJar> {
         val packagesToRelocate = listOf(
-                "javassist",
-                "org.glassfish",
-                "org.jvnet",
-                "jersey.repackaged",
-                "com.fasterxml",
-                "io.netty",
-                "org.bouncycastle",
-                "org.apache",
-                "org.aopalliance",
-                "org.scijava",
-                "com.google",
-                "javax.annotation",
-                "javax.ws",
-                "net.sf",
-                "org.objectweb"
+            "javassist",
+            "org.glassfish",
+            "org.jvnet",
+            "jersey.repackaged",
+            "com.fasterxml",
+            "io.netty",
+            "org.bouncycastle",
+            "org.apache",
+            "org.aopalliance",
+            "org.scijava",
+            "com.google",
+            "javax.annotation",
+            "jakarta.annotation",
+            "javax.ws",
+            "net.sf",
+            "org.objectweb"
         )
         return tasks.named<ShadowJar>("shadowJar") {
             archiveClassifier.set(null)

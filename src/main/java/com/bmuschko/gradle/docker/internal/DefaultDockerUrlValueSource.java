@@ -37,7 +37,7 @@ public abstract class DefaultDockerUrlValueSource implements ValueSource<String,
             }
         }
 
-        logger.info("Default docker.url set to " + dockerUrl);
+        logger.info("Default docker.url set to {}", dockerUrl);
         return dockerUrl;
     }
 

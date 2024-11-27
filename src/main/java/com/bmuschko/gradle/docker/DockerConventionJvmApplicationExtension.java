@@ -89,7 +89,7 @@ public class DockerConventionJvmApplicationExtension {
     /**
      * The main class name to use for starting the application e.g. {@code com.bmuschko.app.Main}.
      * <p>
-     * By default tries to automatically find the main class by scanning the classpath.
+     * By default, tries to automatically find the main class by scanning the classpath.
      * The value of this property takes precedence and circumvents classpath scanning.
      *
      * @since 6.1.0

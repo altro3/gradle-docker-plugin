@@ -32,7 +32,7 @@ public class DockerRemoveImage extends DockerExistingImage {
 
     @Override
     public void runRemoteCommand() {
-        getLogger().quiet("Removing image with ID \'" + getImageId().get() + "\'.");
+        getLogger().quiet("Removing image with ID '{}'.", getImageId().get());
         RemoveImageCmd removeImageCmd = getDockerClient().removeImageCmd(getImageId().get());
 
         if (Boolean.TRUE.equals(force.getOrNull())) {

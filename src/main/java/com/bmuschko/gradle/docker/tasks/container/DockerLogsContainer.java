@@ -52,7 +52,7 @@ public class DockerLogsContainer extends DockerExistingContainer {
     }
 
     /**
-     * Set to true to copy all output since the container has started. For long running containers or containers
+     * Set to true to copy all output since the container has started. For long-running containers or containers
      * with a lot of output this could take a long time. This cannot be set if #tailCount is also set. Setting to false
      * leaves the decision of how many lines to copy to docker.
      * Default is unspecified (docker defaults to true).
@@ -147,7 +147,7 @@ public class DockerLogsContainer extends DockerExistingContainer {
         logAndProcessResponse(getDockerClient());
     }
 
-    // method used for sub-classes who wish to invoke this task
+    // method used for subclasses who wish to invoke this task
     // multiple times but don't want the logging message to be
     // printed for every iteration.
     public void logAndProcessResponse(DockerClient dockerClient) throws InterruptedException {

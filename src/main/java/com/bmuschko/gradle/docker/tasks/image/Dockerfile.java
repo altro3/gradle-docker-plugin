@@ -896,7 +896,7 @@ public class Dockerfile extends DefaultTask {
     }
 
     /**
-     * The <a href="https://docs.docker.com/engine/reference/builder/#user">USER instruction</a> sets the user name or UID to
+     * The <a href="https://docs.docker.com/engine/reference/builder/#user">USER instruction</a> sets the username or UID to
      * use when running the image and for any RUN, CMD and ENTRYPOINT instructions that follow it in the Dockerfile.
      * <p>
      * Example in Groovy DSL:
@@ -2100,7 +2100,7 @@ public class Dockerfile extends DefaultTask {
         /**
          * Sets the healthcheck number of retries by adding {@code --retries} to Healthcheck instruction.
          *
-         * @param retries the number of retries. Must be greater than 0, or it will fallback to the default (3).
+         * @param retries the number of retries. Must be greater than 0, or it will fall back to the default (3).
          * @return this healthcheck.
          */
         public Healthcheck withRetries(int retries) {

@@ -29,7 +29,7 @@ public final class OutputCollector implements Closeable {
      * @param input The string to accept.
      */
     public void accept(String input) {
-        // Split the received output segment on line terminators (newlines).
+        // Split the received output segment by end-of-line characters (newlines).
         // We always store the first part in the buffer. All subsequent parts result in
         // a buffer flush.
         // For example, if stream = "output line\n", the string will be split into ["output line", ""].

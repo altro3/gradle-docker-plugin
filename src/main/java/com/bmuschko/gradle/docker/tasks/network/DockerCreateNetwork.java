@@ -61,7 +61,7 @@ public class DockerCreateNetwork extends AbstractDockerRemoteApiTask {
 
     @Override
     public void runRemoteCommand() {
-        getLogger().quiet("Creating network '" + getNetworkName().get() + "'.");
+        getLogger().quiet("Creating network '{}'.", getNetworkName().get());
         CreateNetworkCmd networkCmd = getDockerClient().createNetworkCmd().withName(networkName.get());
 
         if (ipam.getDriver().isPresent() || !ipam.getConfigs().get().isEmpty()) {
@@ -85,7 +85,7 @@ public class DockerCreateNetwork extends AbstractDockerRemoteApiTask {
 
         String createdNetworkId = network.getId();
         networkId.set(createdNetworkId);
-        getLogger().quiet("Created network with ID '" + createdNetworkId + "'.");
+        getLogger().quiet("Created network with ID '{}'.", createdNetworkId);
     }
 
     public static class Ipam {

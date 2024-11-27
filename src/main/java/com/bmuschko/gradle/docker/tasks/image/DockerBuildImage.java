@@ -138,7 +138,7 @@ public class DockerBuildImage extends AbstractDockerRemoteApiTask implements Reg
      * Labels to attach as metadata for to the image.
      * <p>
      * This property is not final to allow build authors to remove the labels from the up-to-date
-     * check by extending {@code DockerBuildImage} and annotating the overrided {@code getLabels()} method
+     * check by extending {@code DockerBuildImage} and annotating the override {@code getLabels()} method
      * with {@code @Internal}, example:
      *
      * <pre>

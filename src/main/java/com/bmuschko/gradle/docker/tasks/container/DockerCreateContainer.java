@@ -649,7 +649,7 @@ public class DockerCreateContainer extends DockerExistingImage {
          * The key of this map is the container target path, the value stores
          * the tmpfs comma-separated options.
          * <p>
-         * For example, to create a temporary 50MB writeable non executable filesystem mounted under /data
+         * For example, to create a temporary 50MB writeable non-executable filesystem mounted under /data
          * in the container: {@code tmpFs = ['/data': 'rw,noexec,size=50m']}
          * <p>
          * <a href="https://docs.docker.com/storage/tmpfs/">Original documentation</a>
@@ -778,7 +778,7 @@ public class DockerCreateContainer extends DockerExistingImage {
          * <strong>Note:</strong>
          * <ol>
          * <li>Not all sysctls are namespaced.</li>
-         * <li>Docker does not support changing sysctls inside of a container that also modify the host system.</li>
+         * <li>Docker does not support changing sysctls inside a container that also modify the host system.</li>
          * </ol>
          */
         @Input

@@ -1,15 +1,15 @@
 [versions]
-asciidoctor-jvm-plugin = "3.3.2"
+asciidoctor-jvm-plugin = "4.0.3"
 asciidoctorj-tabbed-code-extension = "0.3"
-grgit = "1.9.1"
-gradle-git = "1.7.1"
-gradle-git-publish = "0.3.3"
-shadow = "7.1.2"
+grgit = "5.3.0"
+reckon = "0.19.1"
+gradle-git-publish = "4.2.2"
+shadow = "8.3.5"
 
 [libraries]
 asciidoctor-jvm-plugin = { module = "org.asciidoctor:asciidoctor-gradle-jvm", version.ref = "asciidoctor-jvm-plugin" }
 asciidoctorj-tabbed-code-extension = { module = "com.bmuschko:asciidoctorj-tabbed-code-extension", version.ref = "asciidoctorj-tabbed-code-extension" }
-grgit = { module = "org.ajoberstar:grgit", version.ref = "grgit" }
-gradle-git = { module = "org.ajoberstar:gradle-git", version.ref = "gradle-git" }
-gradle-git-publish = { module = "org.ajoberstar:gradle-git-publish", version.ref = "gradle-git-publish" }
-shadow = { module = "gradle.plugin.com.github.johnrengelman:shadow", version.ref = "shadow" }
+grgit = { module = "org.ajoberstar.grgit:grgit-gradle", version.ref = "grgit" }
+reckon = { module = "org.ajoberstar.reckon:reckon-gradle", version.ref = "reckon" }
+gradle-git-publish = { module = "org.ajoberstar.git-publish:gradle-git-publish", version.ref = "gradle-git-publish" }
+shadow = { module = "com.gradleup.shadow:shadow-gradle-plugin", version.ref = "shadow" }

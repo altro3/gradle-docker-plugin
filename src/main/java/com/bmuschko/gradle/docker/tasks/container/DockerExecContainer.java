@@ -286,7 +286,7 @@ public class DockerExecContainer extends DockerExistingContainer {
                             System.err.flush();
                             break;
                         default:
-                            getLogger().error("unknown stream type:" + frame.getStreamType());
+                            getLogger().error("unknown stream type: {}", frame.getStreamType());
                     }
                 }
             }

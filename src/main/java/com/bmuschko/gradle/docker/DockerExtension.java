@@ -4,12 +4,10 @@ import com.bmuschko.gradle.docker.internal.DefaultDockerConfigResolver;
 import com.bmuschko.gradle.docker.internal.DefaultDockerUrlValueSource;
 import com.bmuschko.gradle.docker.internal.DockerConfigResolver;
 import org.gradle.api.Action;
-import org.gradle.api.XmlProvider;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.provider.ProviderFactory;
-import org.gradle.api.provider.ValueSourceParameters;
 
 import java.io.File;
 

@@ -126,8 +126,8 @@ public class RegistryAuthLocator {
     }
 
     private AuthConfig lookupAuthConfigForRegistry(String registry) {
-        logger.debug("Looking up auth config for registry: " + registry);
-        logger.debug("RegistryAuthLocator has configFile: " + configFile.getAbsolutePath() + " (" + (configFile.exists() ? "exists" : "does not exist") + ") and commandPathPrefix: " + commandPathPrefix);
+        logger.debug("Looking up auth config for registry: {}", registry);
+        logger.debug("RegistryAuthLocator has configFile: {} ({}) and commandPathPrefix: {}", configFile.getAbsolutePath(), configFile.exists() ? "exists" : "does not exist", commandPathPrefix);
 
         if (!configFile.isFile()) {
             return null;
@@ -175,7 +175,7 @@ public class RegistryAuthLocator {
     public AuthConfigurations lookupAllAuthConfigs() {
         AuthConfigurations authConfigurations = new AuthConfigurations();
 
-        logger.debug("RegistryAuthLocator has configFile: " + configFile.getAbsolutePath() + " (" + (configFile.exists() ? "exists" : "does not exist") + ") and commandPathPrefix: " + commandPathPrefix);
+        logger.debug("RegistryAuthLocator has configFile: {} ({}) and commandPathPrefix: {}", configFile.getAbsolutePath(), configFile.exists() ? "exists" : "does not exist", commandPathPrefix);
 
         if (!configFile.isFile()) {
             return authConfigurations;

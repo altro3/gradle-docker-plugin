@@ -5,7 +5,6 @@ import org.ajoberstar.gradle.git.publish.GitPublishPlugin
 import org.asciidoctor.gradle.jvm.AsciidoctorTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.tasks.javadoc.Groovydoc
 import org.gradle.api.tasks.javadoc.Javadoc
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
 import org.gradle.kotlin.dsl.*
@@ -25,7 +24,7 @@ class DocumentationPlugin : Plugin<Project> {
 
     private
     fun Project.addLinks() {
-        val javaApiUrl = "https://docs.oracle.com/en/java/javase/11/docs/api"
+        val javaApiUrl = "https://docs.oracle.com/en/java/javase/21/docs/api"
         val gradleApiUrl = "https://docs.gradle.org/${project.gradle.gradleVersion}/javadoc/"
 
         tasks.withType<Javadoc>().configureEach {
